@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0; 
+    margin: 0;
+    font-family: "Merriweather", serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: white;
+}
+nav{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    padding: 0.8rem;
+    background-color: #ffffff;
+    z-index: 10000;
+}
+nav .logo{
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+nav .logo img{
+    width: 4.3em;
+    height: 4rem;
+}
+nav .logo a{
+    color: #f77336;
+    font-size: 2.3rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+nav .buttons-nav a{
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    transition: 0.2s ease-in-out;
+    
+}
+nav .buttons-nav a:hover{
+    color: #f77336;
+}
+nav .button-book{
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    border-radius: 1.5rem;
+    padding: 0.7rem 1.8rem;
+    margin-right: 2rem;
+    transition: 0.5s;
+}
+nav .button-book:hover{
+    background-color: #f77336;
+    transform: scale(1.05);
+}
+nav .button-book a{
+    color: black;
+    text-decoration: none;
+}
+main .home{
+    background-image: url("img/back.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .home .text-home{
+    text-align: center;
+}
+main .home .text-home h1{
+    font-family: "Averia Serif Libre", serif;
+    color: #f77336;
+    font-size: 5rem;
+    padding-bottom: 1.3rem;
+    animation: showContent 1s ease-in-out 1 forwards;
+}
+main .home .text-home p{
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 1.75rem;
+    animation: showContent 1s ease-in-out 1 forwards;
+}
+main .about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: whitesmoke;
+}
+main .about h1{
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    animation-name: autoshowanimation;
+    animation-timeline: view(10% auto);
+}
+main .about .about-info{
+    display: flex;
+    flex-direction: row;
+    padding: 0 3rem;
+}
+main .about .about-text{
+    padding-top: 2rem;
+    padding-right: 4rem;
+    
+}
+main .about .about-text p{
+    font-family: "Work Sans", sans-serif;
+    font-size: 1.4rem;
+    animation: autoshowanimation both;
+    animation-timeline: view(80% auto);
+}
+main .about img{
+    width: 20rem;
+    height: 20rem;
+    animation: autoshowanimation both;
+    animation-timeline: view(80% auto);
+}
+main .types h1{
+    margin-top: 3rem;
+    animation: autoshowanimation both;
+    animation-timeline: view(80% auto);
+}
+main .gallery{
+    margin: 0 6rem;
+    margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 2rem;     
+}
+main .types h1{
+    text-align: center;
+    padding-bottom: 4rem;
+}
+main .gallery .tryc-types{
+    padding: 0.2rem;
+    padding: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 1rem;
+    width: 100%;
+    height: 22.2rem;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    animation: autoshowanimation both;
+    animation-timeline: view(100% auto);
+}
+main .gallery .tryc-types img{
+    overflow: hidden;
+    border-radius: 1rem;
+    width: 100%;
+    height: 13.5rem;
+}
+
+main .gallery .tryc-types .gallery-text p{
+    padding-bottom: 0.4rem;
+    margin-left: 0.9rem;
+}
+main .gallery .tryc-types .gallery-text h4{
+    padding-top: 1rem;
+    padding-bottom: 0.2rem;
+    margin-left: 0.9rem;
+}
+
+main .gallery .tryc-types .gallery-text button{
+    margin-left: 2%;
+    width: 97%;
+    margin-top: 0.5rem;
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+    transition: 0.2s;
+    border: 1px solid black;
+    cursor: pointer;
+}
+main .gallery .tryc-types .gallery-text input:hover{
+    background-color: #f77336;
+}
+main .gallery .tryc-types .gallery-text input:active{
+    background-color: #fb9565;
+}
+.contact{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.contact .contact-info .contact-type{
+    padding-bottom: 1rem;
+}
+.contact .contact-info .contact-type h4{
+    font-family: "Poppins", sans-serif;
+}
+.contact .contact-info .contact-type p{
+    font-family: "Poppins", sans-serif;
+}
+.contact .contact-info .contact-type i{
+    padding-right: 0.5rem;
+}
+.contact .contact-box{
+    background-color: whitesmoke;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    height: 31.6rem;
+    width: 25rem;
+    padding: 2rem 2rem 3rem 2rem;
+    border-radius: 1rem;
+
+}
+
+.contact .contact-box h1{
+    text-align: center;
+    padding-bottom: 1rem;
+}
+.contact .contact-box .input{
+    padding-bottom: 0.5rem;
+
+}
+.contact .contact-box .input input{
+    width: 100%;
+    padding: 0.5rem;
+    outline: none;
+    border-radius: 0.5rem;
+    border:1px solid #6e6e6e;
+}
+
+.contact .contact-box .input label{
+    margin-bottom: 0.5rem;
+}
+.contact .contact-box .input2{
+    padding-bottom: 0.5rem;
+}
+.contact .contact-box .input2 .genderinput{
+    width: 100%;
+}
+.contact .contact-box .input2 .genderinput input{
+        cursor: pointer;
+}
+.contact .contact-box .input2 textarea{
+    width: 100%;
+    height: 6rem;
+    outline: none;
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    margin-top: 3px;
+}
+.contact .contact-box .contact-submit input{
+    width: 100%;
+    padding: 0.4rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    outline: none;
+    cursor: pointer;
+}
+.contact .contact-box .contact-submit input:hover{
+    background-color: #f77336;
+}
+.contact .contact-box .contact-submit input:active{
+    background-color: #f8a27a;
+}
+footer .footerbox{
+    height: 4rem;
+    width: 100%;
+    background-color: rgb(56, 56, 56);
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem;
+    align-items: center;
+}
+footer .footerbox .social-media{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer .footerbox .social-media .social-media-links{
+    padding: 1rem;
+}
+footer .footerbox .social-media p{
+    color: white;
+}
+footer .footerbox .social-media i{
+    font-size: 2rem;
+    color: white;
+    padding-left: 0.5rem;
+    cursor: pointer;
+}
+footer .footerbox .social-media #fb{
+    color: rgb(55, 98, 238);
+}
+footer .footerbox .social-media #insta{
+    background: #F9CE34;
+    background: linear-gradient(to right, #F9CE34 0%, #EE2A7B 50%, #6228D7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+footer .footerbox .social-media #twitter{
+    color: #1DA1F2;
+}
+footer .footerbox .name{
+    text-align: center;
+}
+footer .footerbox .name h1{
+    color: #f77336;
+    font-size: 3rem;
+}
+footer .footerbox .name h4{
+    color: white;
+    font-size: 1rem;
+}
+footer .footerbox .general-info{
+    display: flex;
+    flex-direction: column;
+}
+footer .footerbox .general-info p{
+    color: orange;
+}
+footer .footerbox .general-info a{
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+@keyframes autoshowanimation {
+    from{   
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+
+    }to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    
+}
+@keyframes showContent {
+    to{
+        transform: translateY(0);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+main .home .text-home h1,
+main .home .text-home p{
+    transform: translateY(20px);
+    opacity: 0;
+    filter: blur(20px);
+}
+
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ec3a025c59.js" crossorigin="anonymous"></script>
+    <title>Rent Now</title>
+</head>
+<body>
+    <div class="back">
+        <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
+        <div class="logo">
+            <img src="tryc.gif" alt="Logo">
+            <h1>RENTA</h1>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Tricycle Rental - Sumakay ng walang hirap at<br>ligtas.</h1>
+        <p>Any time anywhere <i class="fa-solid fa-check"></i> San Jose Area only <i class="fa-solid fa-check"></i></p>
+        <div class="inputs">
+            <form onsubmit="event.preventDefault(); displaymessage();">
+                <div class="first_input">
+                    <label for="fname"><i class="fa-solid fa-user"></i></label>
+                    <input type="text" id="fname" placeholder="Enter your Full Name" required>
+
+                    <label for="num"><i class="fa-solid fa-phone"></i></label>
+                    <input type="number" id="num" placeholder="Enter your phone number" required>
+
+                    <label for="email"><i class="fa-solid fa-envelope"></i></label>
+                    <input type="email" id="email" placeholder="Enter your email address">
+                </div>
+
+                <div class="second_inputs">
+                    <label for="pickup">Pickup location</label>
+                    <select id="pickup" required>
+                        <option value="Bagong Sikat">Bagong Sikat</option>
+                        <option value="Bagong Silang">Bagong Silang</option>
+                        <option value="Bubog">Bubog</option>
+                        <option value="Mabini">Mabini</option>
+                        <option value="Magbay">Magbay</option>
+                        <option value="Mangarin">Mangarin</option>
+                        <option value="Pag-asa">Pag-asa</option>
+                        <option value="Poblacion I">Poblacion I</option>
+                        <option value="Poblacion II">Poblacion II</option>
+                        <option value="Poblacion III">Poblacion III</option>
+                        <option value="Poblacion IV">Poblacion IV</option>
+                        <option value="Poblacion V">Poblacion V</option>
+                        <option value="Poblacion VI">Poblacion VI</option>
+                        <option value="Rizal">Rizal</option>
+                        <option value="San Roque">San Roque</option>
+                        <option value="La Curva">La Curva</option>
+                        <option value="Murtha">Murtha</option>
+                        <option value="Central">Central</option>
+                    </select>
+
+                    <label for="date">Pick up date</label>
+                    <input type="date" id="date" required>
+
+                    <label for="time">Pick up time</label>
+                    <input type="time" id="time" required>
+
+                    <label for="drop-off">Drop off location</label>
+                    <select id="drop-off" required>
+                        <option value="Bagong Sikat">Bagong Sikat</option>
+                        <option value="Bagong Silang">Bagong Silang</option>
+                        <option value="Bubog">Bubog</option>
+                        <option value="Mabini">Mabini</option>
+                        <option value="Magbay">Magbay</option>
+                        <option value="Mangarin">Mangarin</option>
+                        <option value="Pag-asa">Pag-asa</option>
+                        <option value="Poblacion I">Poblacion I</option>
+                        <option value="Poblacion II">Poblacion II</option>
+                        <option value="Poblacion III">Poblacion III</option>
+                        <option value="Poblacion IV">Poblacion IV</option>
+                        <option value="Poblacion V">Poblacion V</option>
+                        <option value="Poblacion VI">Poblacion VI</option>
+                        <option value="Rizal">Rizal</option>
+                        <option value="San Roque">San Roque</option>
+                        <option value="La Curva">La Curva</option>
+                        <option value="Murtha">Murtha</option>
+                        <option value="Central">Central</option>
+                    </select>
+                    <div class="submit">
+                        <button type="submit">Book Now</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="container-message" id="popup">
+        <div class="img"><i class="fa-solid fa-check"></i></div>
+        <div class="popup">
+            <h1>Thank You!</h1>
+            <p class="message">Please wait for the driver to arrive at your pickup location.</p>
+
+            <button type="button" onclick="closePopUp()">Okay</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
